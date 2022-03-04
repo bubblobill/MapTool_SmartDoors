@@ -45,7 +45,7 @@ graph LR;
     - "visible"   (set visible to players true)
     - "hidden"    (set visible to players false)
   - call **doors.interrupt(vArgs)**
-    - **doors.interrupt(vArgs)** is a placeholder to allow users to insert their own calls and code. For instance, you could make a skill check to pick the lock, set off a trap, or anyt other funkyness.
+    - **doors.interrupt(vArgs)** is a placeholder to allow users to insert their own calls and code. For instance, you could make a skill check to pick the lock, set off a trap, or any other funkyness.
   - pass args to **doors.action(vArgs)**
 - **doors.action(vArgs)**
   - Where there are linked doors - for certain actions - prompt if action should be applied to linked doors
