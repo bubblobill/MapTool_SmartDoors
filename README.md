@@ -1,4 +1,5 @@
 # MapTool_SmartDoors
+[Original design document.](https://docs.google.com/document/d/188tzY2QfLzqQlyFXZv61z49s9AD03zabmD7wlefJyoQ/edit) Worth a read if you want to contribute.
 ## Features
 Doors that can be opened, shut, locked, unlocked, hidden, linked to other doors, and various other cool things.
 Clicking on a door brings up a context sensitive overlay on the map allowing players to perform the various actions.
