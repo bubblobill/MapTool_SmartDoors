@@ -13,6 +13,7 @@ graph LR;
     isSmart-->|args object|doSmart(doSmart);
     doSmart(doSmart)-->|args object|popup(popup);
 ```
+
 - **doors.popup(vArgs)**
   - Stop if more or less than one door selected.
   - Stop if editor is visible.
@@ -70,3 +71,61 @@ graph LR;
   - Expose FoW.
   - Deselect tokens
   - Refresh the GM panel "Door Controls"
+
+
+```mermaid
+graph LR;
+   popup(Popup)-->|form values|popupProcessor(Popup Processor);
+popupProcessor(Popup Processor)-->|action arguments|interrupt(Interrupt);
+interrupt(Interrupt)-->|action arguments|popupProcessor(Popup Processor);
+popupProcessor(Popup Processor)--->|action arguments|action0(Action);
+action0(Action)--->act{Act};
+action0(Action)-->finish[Stuff];
+act{Act}-->action0(Action);
+act{Act}-->|action arguments|add;
+act{Act}-->|action arguments|remove;
+act{Act}-->|action arguments|link;
+act{Act}-->|action arguments|unlink;
+act{Act}-->|action arguments|lock;
+act{Act}-->|action arguments|lockToggle;
+act{Act}-->|action arguments|unlock;
+act{Act}-->|action arguments|open;
+act{Act}-->|action arguments|peek;
+act{Act}-->|action arguments|peekOn;
+act{Act}-->|action arguments|peekOff;
+act{Act}-->|action arguments|lift;
+act{Act}-->|action arguments|slide;
+act{Act}-->|action arguments|swingCW;
+act{Act}-->|action arguments|swingCCW;
+add        -->act{Act};
+remove     -->act{Act};
+link       -->act{Act};
+unlink     -->act{Act};
+lock       -->act{Act};
+lockToggle -->act{Act};
+unlock     -->act{Act};
+open       -->act{Act};
+peek       -->act{Act};
+peekOn     -->act{Act};
+peekOff    -->act{Act};
+lift       -->act{Act};
+slide      -->act{Act};
+swingCW    -->act{Act};
+swingCCW   -->act{Act};
+add-->|action arguments|doors.addSmart;
+remove-->|action arguments|doors.removeDoor;
+link-->|action arguments|doors.setLinks;
+unlink-->|action arguments|doors.unLink;
+lock-->|action arguments|doors.setLock;
+lockToggle-->|action arguments|doors.setLock;
+unlock-->|action arguments|doors.setLock;
+open-->|action arguments|doors.doOpen;
+peek-->|action arguments|doors.doPeek;
+peekOn-->|action arguments|doors.setPeek;
+peekOff-->|action arguments|doors.setPeek;
+lift-->|action arguments|doors.setSubtype;
+slide-->|action arguments|doors.setSubtype;
+swingCW-->|action arguments|doors.setSubtype;
+swingCCW-->|action arguments|doors.setSubtype;
+
+```
