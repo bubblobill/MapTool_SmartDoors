@@ -1,4 +1,5 @@
-#Smart Door Processing Chain
+Smart Door Processing Chain
+
 Smart door processing commences at **doSmart(tokenIds)**
 - Close the Smart door control overlay on all clients (only one person at a time can operate a door to avoid bad things happening).
 - Use passed arguments or collate arguments to pass for selected doors using **doors.isSmart(tokenIds)**.
