@@ -42,7 +42,5 @@ The **checkDoors** process is;
 - Abort if door functionality is turned off
 - If there is only one token selected and it is a Simple door, set the *toggleDoor* flag.
 - Close the Smart door control overlay.
-- If token(s) selected are Smart doors.
-  - Close the Smart door control overlay on all clients (only one person at a time can operate a door to avoid bad things happening).
-  - Start the Smart door process chain **doors.doSmart(vSmart)**
-- If *toggleDoor* flag is set, close or open the door based on it's current state.
+- If token(s) selected are Smart doors, start the Smart door process chain **doors.doSmart(vSmart)**
+- If *toggleDoor* flag is set (i.e. a Simple door), close or open the door based on it's current state.
